@@ -100,3 +100,22 @@
 .open-post__heart-count span {
     margin-left: 5px;
 }
+
+@keyframes heartBeat {
+    0%{
+        color: white;
+        transform: none;
+    }
+    50% {
+        color: tomato;
+        transform: sclae(1.5);
+    }
+    10% {
+        color: white;
+    }
+}
+
+.open-post__heart-count:hover i {
+    will-change: transform;
+    animation: heartBeat 1s linear infinite;
+}
